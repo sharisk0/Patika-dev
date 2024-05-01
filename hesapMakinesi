@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class hesapMakinesi {
+    public static void main(String[] args) {
+        int num1, num2, select;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Hesap makinesine hoş geldiniz :)");
+        System.out.print("İlk sayıyı giriniz : ");
+        num1 = input.nextInt();
+        System.out.print("ikinci sayıyı giriniz : ");
+        num2 = input.nextInt();
+
+        System.out.println("Yapmak istediğiniz işlemin numarasını aşağıdakilerden seçiniz");
+        System.out.println("1-Toplama\n2-Çıkarma\n3-Bölme\n4-Çarpma");
+        select = input.nextInt();
+        if (select == 1) {
+            System.out.println("Toplam: " + (num1 + num2));
+        } else if (select == 2) {
+            System.out.println("Çıkarma : " + (num1 - num2));
+
+        } else if (select == 3) {
+            if (num2 == 0) {
+                System.out.println("Hiçbir sayı 0'a bölünemez!!!\n      TEKRAR DENEYİNİZ!!");
+            } else if (num2 != 0) {
+                System.out.println("Bölme :" + (num1 / num2));
+            }
+
+        } else if (select == 4) {
+            System.out.println("Çarpma : " + (num1 * num2));
+        }
+
+    }
+}
