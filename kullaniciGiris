@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+public class kullaniciGirissc {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String username, password, kullanici;
+        int select;
+        System.out.println("Hoş geldiniz :)");
+        System.out.print("Kullamıcı adınızı giriniz : ");
+        username = input.nextLine();
+        System.out.print("Şifrenizi giriniz : ");
+        password = input.nextLine();
+        if (username.equals("Sahara") && password.equals("harun123123")) {
+            System.out.println("Başarılı bir şekilde giriş yaptınız :) ");
+        } else {
+            System.out.println("Şifre yanlış şifrenizi değiştirmek ister misiniz?\n 1-EVET 2-HAYIR");
+            select = input.nextInt();
+            if (select == 1) {
+                System.out.println("Yeni şifreyi giriniz");
+                kullanici = input.nextLine();
+                kullanici = input.nextLine();
+                if (kullanici.equals("harun123123")){
+                    System.out.println("Şifre eskisiyle ve yanlış şifreyle aynı olamaz");
+
+                } else{
+                    System.out.println("Şifre başarıyla değiştirilmiştir : "+ kullanici);
+                }
+
+            }
+        }
+
+
+    }
+}
