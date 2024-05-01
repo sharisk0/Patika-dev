@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class kdvHesaplama {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Bir ürünün KDV'sini hsaplyana Programa hoş geldiniz :)");
+        System.out.println("");
+        double tutar, kdvTutari, kdvliTutar, kdvorani;
+        System.out.print("Ürünün fiyatı  : ");
+        tutar = inp.nextDouble();
+        if (tutar > 1000) {
+            kdvorani = 0.08;
+            kdvTutari = tutar * kdvorani;
+            kdvliTutar = tutar + kdvTutari;
+            System.out.println("KDV tutarı : "+ kdvTutari);
+            System.out.println("KDVli Tutar : "+ kdvliTutar);
+            System.out.println("KDV Oranı : " + kdvorani);
+        } else if (tutar < 1000) {
+            kdvorani = 0.18;
+            kdvTutari = tutar * kdvorani;
+            kdvliTutar = tutar + kdvTutari;
+            System.out.println("KDV tutarı : "+ kdvTutari);
+            System.out.println("KDVli Tutar : "+ kdvliTutar);
+            System.out.println("KDV Oranı : " + kdvorani);
+        }
+
+
+    }
+}
