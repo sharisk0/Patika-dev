@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class taksimetreProgrami {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int km,startPrice=10;
+        double perkm,total;
+        System.out.println("Taksi ile ne kadar yol gittiğinizi KM cinsinden yazınız : ");
+        km = inp.nextInt();
+        perkm =  2.20;
+        total = perkm*km;
+        total +=startPrice;
+        total = (total<20) ? 20 : total;
+        System.out.println("Toplam ödenecek tutar :  " + total);
+
+
+    }
+}
