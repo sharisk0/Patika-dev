@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class manav {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int armutt,elmat,muzt,patlıcant,domatest;
+
+        System.out.println("Manava hoş geldiniz ?");
+        System.out.println("Ürnlerden kaç kilo aldığınızı giriniz : ");
+        System.out.print("Muz : ");
+        muzt = inp.nextInt();
+        System.out.print("Elma : ");
+        elmat = inp.nextInt();
+        System.out.print("Patlıcan : ");
+        patlıcant = inp.nextInt();
+        System.out.print("Domates : ");
+        domatest = inp.nextInt();
+        System.out.print("Armut : ");
+        armutt = inp.nextInt();
+        System.out.println("Toplam ödeyeceğiniz ücret : "+((armutt*2.14)+(muzt*0.95)+(elmat*3.67)+(domatest*1.11)+(patlıcant*5)) );
+
+
+
+    }
+}
