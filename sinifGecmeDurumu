@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class notOrtalamasiHesaplayanaProgram {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int mat, turkce, muzik, fizik, tarih, kimya;
+        float ortlama;
+        System.out.println("Türkçe notunuz giriniz : ");
+        turkce = inp.nextInt();
+        System.out.println("Matematik notunuz giriniz : ");
+        mat = inp.nextInt();
+        System.out.println("Kimya notunuz giriniz : ");
+        kimya = inp.nextInt();
+        System.out.println("Fizik notunuz giriniz : ");
+        fizik = inp.nextInt();
+        System.out.println("Müzik notunuz giriniz : ");
+        muzik = inp.nextInt();
+        System.out.println("Tarih notunuz giriniz : ");
+        tarih = inp.nextInt();
+
+        if (mat < 0 || mat > 100 || fizik < 0 || fizik > 100 ||
+                kimya < 0 || kimya > 100 || turkce < 0 || turkce > 100 || muzik < 0 || muzik > 100 || tarih < 0 || tarih > 100) {
+
+            System.out.println("Yanlış giriş yaptınız. Lütfen 0-100 arasında notlar giriniz!");
+
+        } else {
+            ortlama = (mat + turkce + tarih + kimya + fizik + muzik) / 6;
+            System.out.println("Ortlamanız : " + ortlama);
+
+            if (ortlama < 60) {
+                System.out.println("Maalesef Kaldınzı  :(");
+            } else {
+                System.out.println("Tebrikler Geçtiniz :)");
+            }
+        }
+    }
+}
+
