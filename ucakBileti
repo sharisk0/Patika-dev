@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class ucakBileti {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int mesafe, age, type;
+        double normalprice,firstprice;
+        System.out.println("   HOŞ GELDİNİZ");
+        System.out.println("Uçak Bileti fiyatı sorgulama ekranına hoş geldiniz lütfen bilgileri giriniz ");
+
+        System.out.print("Kaç KM yol gideceksiniz : ");
+        mesafe = inp.nextInt();
+        if (!(mesafe >= 0)) {
+            System.out.println("Lütfen Pozitif bir değer giriniz !");
+            mesafe = inp.nextInt();
+        }
+        System.out.print("Yaşınızı Giriniz : ");
+        age = inp.nextInt();
+        if (!(age >= 0)) {
+            System.out.println("Lütfen yaşınızı pozitif olarak girinz ! ");
+            age = inp.nextInt();
+        }
+        System.out.println("Yolculuk tipi seçiniz \n 1-TEK YÖN  2-GİDİŞ GÖNÜŞ");
+        type = inp.nextInt();
+        firstprice=mesafe*(0.10);
+        normalprice = mesafe * (0.10);
+        switch (type) {
+            case 1:
+                if (age < 12) {
+                    System.out.println("%50 yaş indirimi uygulanacaktır :)");
+                    normalprice -= normalprice * 1 / 2;
+
+                } else if (age <= 24) {
+                    System.out.println("%10 yaş indirimi uygulanacaktır :)");
+                    normalprice -= normalprice * 1 / 10;
+                } else if (age > 65) {
+                    System.out.println("%30 yaş indirimi uygulanacaktır :)");
+                    normalprice -= normalprice * 3 / 10;
+                }
+                break;
+            case 2:
+                if (age < 12) {
+                    System.out.println("%50 yaş indirimi uygulanacaktır :)");
+                    normalprice -= normalprice * 1 / 2;
+
+                } else if (age <= 24) {
+                    System.out.println("%10 yaş indirimi uygulanacaktır :)");
+                    normalprice -= normalprice * 1 / 10;
+                } else if (age > 65) {
+                    System.out.println("%30 yaş indirimi uygulanacaktır :)");
+                    normalprice -= normalprice * 3 / 10;
+                }
+                System.out.println(" Ekstra olarak Gidiş Dönüş seçtiğiniz için İndirimli fiyat üzerinden %20  indirim uygulanacak");
+                normalprice-=normalprice*1/5;
+                break;
+
+        }
+        System.out.println("Son bilet fiyatınız : " + normalprice);
+        System.out.println("İndirimsiz bilet fiyatınız şuydu : " + firstprice);
+    }
+}
