@@ -11,17 +11,21 @@ public class ucakBileti {
         System.out.print("Kaç KM yol gideceksiniz : ");
         mesafe = inp.nextInt();
         if (!(mesafe >= 0)) {
-            System.out.println("Lütfen Pozitif bir değer giriniz !");
+            System.out.println("HATALI VERİ GİRİDİNZ ! Lütfen Pozitif bir değer giriniz !");
             mesafe = inp.nextInt();
         }
         System.out.print("Yaşınızı Giriniz : ");
         age = inp.nextInt();
         if (!(age >= 0)) {
-            System.out.println("Lütfen yaşınızı pozitif olarak girinz ! ");
+            System.out.println("HATALI VERİ GİRDİNİZ ! Lütfen yaşınızı pozitif olarak girinz ! ");
             age = inp.nextInt();
         }
         System.out.println("Yolculuk tipi seçiniz \n 1-TEK YÖN  2-GİDİŞ GÖNÜŞ");
         type = inp.nextInt();
+        if (!(type<=2&&type>=1)){
+            System.out.println("HATALI VERİ GİRDİNİZ LÜTFEN 1 VEYA 2 VERİSİNİ GİRİNİZ ! ");
+            type = inp.nextInt();
+        }
         firstprice=mesafe*(0.10);
         normalprice = mesafe * (0.10);
         switch (type) {
@@ -52,6 +56,7 @@ public class ucakBileti {
                 }
                 System.out.println(" Ekstra olarak Gidiş Dönüş seçtiğiniz için İndirimli fiyat üzerinden %20  indirim uygulanacak");
                 normalprice-=normalprice*1/5;
+                normalprice=normalprice*2;
                 break;
 
         }
