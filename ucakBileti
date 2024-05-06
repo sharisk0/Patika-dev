@@ -61,6 +61,7 @@ public class ucakBileti {
 
         }
         System.out.println("Son bilet fiyatınız : " + normalprice);
-        System.out.println("İndirimsiz bilet fiyatınız şuydu : " + firstprice);
+        System.out.println("İndirimsiz bilet fiyatınız : " + firstprice);
     }
 }
+
