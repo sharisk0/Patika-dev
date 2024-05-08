@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class kombinasyonBulma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int n, r, nFaktoriyel = 1, rFaktoriyel = 1, fFaktoriyel = 1;
+        System.out.println("Faktoriyel hesaplayıcıya hoş geldiniz :)");
+        System.out.println("ilk önce büyük sayıyı giriniz !!");
+        System.out.println("N SAYISI : ");
+        n = inp.nextInt();
+        System.out.println("R SAYISI : ");
+        r = inp.nextInt();
+        for (int i = 1; i <= n; i++) {
+            nFaktoriyel *= i;
+        }
+        for (int k = 1; k <= r; k++) {
+            rFaktoriyel *= k;
+        }
+        for (int l = 1; l <= (n - r); l++) {
+            fFaktoriyel *= l;
+        }
+        System.out.println("C("+n+","+r+") kombinasyonu : "+(nFaktoriyel)/(rFaktoriyel*fFaktoriyel));
+
+
+    }
+}
