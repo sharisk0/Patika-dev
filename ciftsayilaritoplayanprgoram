@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class tekSayilarinToplaminiBulma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int sayi, toplam = 0;
+
+
+        do {
+            System.out.println("Sayı girininiz : ");
+            sayi = inp.nextInt();
+            if (sayi%2==0){
+                toplam+=sayi;
+            }
+        } while (sayi%2==0);
+        System.out.println("Toplam : " + toplam);
+
+    }
+
+}
