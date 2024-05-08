@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class ciftSayiBulma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int sayi, sayac = 0, ortalama, toplam = 0;
+        System.out.println("Sayıyı giriniz : ");
+        sayi = inp.nextInt();
+        for (int i = 1; i <= sayi; i++) {
+            if (i % 12 == 0) {
+                sayac++;
+                toplam += i;
+            }
+        }
+        if (sayac <= 0) {
+            System.out.println("Maalesef giridiğiniz syı 3'e ve 4'e bölünemiyor :( ");
+        } else {
+            System.out.println("Ortalama : " + toplam / sayac);
+        }
+
+
+    }
+}
