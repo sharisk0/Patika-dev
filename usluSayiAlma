@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class usluSayiAlma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        
+        int sayi,n,total=1;
+        System.out.print("Üssünü almak istediğiniz sayıyı giriniz : ");
+        sayi = inp.nextInt();
+        System.out.print("Şimdi de üssünü giriniz : ");
+        n = inp.nextInt();
+        for (int i =1;i<=n;i++){
+            total*=sayi;
+            System.out.println(total);
+
+
+        }
+        System.out.println("Sonuç = "+ total);
+    }
+}
