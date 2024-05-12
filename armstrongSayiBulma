@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class armstrongSayiBulma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int number, basamak = 0, basdeger = 0, toplam=0, basamakussu;
+
+        System.out.print("Sayı giriniz : ");
+        number = inp.nextInt();
+        int firstnumber = number;
+        while (firstnumber != 0) {
+            firstnumber /= 10;
+            basamak++;
+
+        }
+        firstnumber = number;
+
+        while (firstnumber != 0) {
+            basdeger = firstnumber % 10;
+            basamakussu = 1;
+            for (int i = 1; i <= basamak; i++) {
+                basamakussu *= basdeger;
+            }
+            toplam+=basamakussu;
+
+            firstnumber /= 10;
+        }
+
+        if (toplam==number){
+            System.out.println("Girdiğiniz  "+ number+ "  sayısı bir ARMSTRONG SAYI'dır ");
+
+        }else {
+            System.out.println(number+" bir ARMSTRONG SAYI değildir !");
+        }
+
+
+    }
+}
