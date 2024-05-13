@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class harmonikSayiBulanProgram {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int sayi;
+        double result = 0;
+
+        System.out.print("Sayı giriniz : ");
+        sayi = inp.nextInt();
+        for (double i = 1;i<=sayi;i++){
+        result+=(1/i);
+        }
+        System.out.println(result);
+
+    }
+}
