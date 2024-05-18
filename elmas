@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ucgenlerleYildizYapma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Elmas yapma uygulamasına hoş geldiniz :)");
+        System.out.println("Büyüklük belirlemek için bir sayı giriniz ");
+        int sayi = inp.nextInt();
+        for (int i = 1; i <= sayi; i++) {
+            for (int m = 1; m <= sayi - i; m++) {
+                System.out.print(" ");
+            }
+            for (int s = 1; s <= (2 * i) + 1; s++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int b = sayi; b >= 1; b--) {
+            for (int s=1;s<=sayi-b+1;s++){
+                System.out.print(" ");
+            }for (int h=1;h<=(b*2)-1;h++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
