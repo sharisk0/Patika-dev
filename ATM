@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class atm {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        String username, password;
+        double price, balance = 3000;
+        int right = 3;
+        int select;
+
+        while (right > 0) {
+            System.out.print("Kullanıcı adınızı : ");
+            username = inp.nextLine();
+            System.out.print("Şifreniz : ");
+            password = inp.nextLine();
+            if (username.equals("Sahara") && password.equals("esh")) {
+                System.out.println("Merhaba Sahara Bankasına Hoş Geldiniz :)");
+                System.out.println("Yapmak istediğiniz işlemi numaralandırınız :)");
+
+                do {
+                    System.out.println(" 1- Para Yatırma \n 2- Para çekme\n 3- Bakiye sorgulama\n 4- Çıkış yapma");
+                    select = inp.nextInt();
+                    if (select == 1) {
+                        System.out.print("Para yatırmak istediğiniz tutar : ");
+                        price = inp.nextDouble();
+                        balance += price;
+                        System.out.println("Yeni Bakiyeniz : " + balance);
+                    } else if (select == 2) {
+                        System.out.println("Çekmek istediğiniz yutar : ");
+                        price = inp.nextDouble();
+
+                        if (price > balance) {
+                            System.out.println("Bakiyeniz yetersiz!!!");
+                        } else {
+                            balance -= price;
+                            System.out.println("Yeni bakiyeniz :" + balance);
+                        }
+                    } else if (select == 3) {
+                        System.out.println("Bakiyeniz :" + balance);
+
+                    }
+
+                } while (select != 4);
+                System.out.println("Çıkış Yaptınız. Bizi Tercih Ettiğiniz için TEŞEKKÜRLER :)");
+                break;
+            } else {
+                right--;
+
+                if (right == 0) {
+                    System.out.println("Hesabınız bloke olmuştur LÜTFEN bankayla iletişime geçiniz !");
+                } else {
+                    System.out.println("Şifre veya Kullanıcı adınızı yanlış girdiniz! Tekrar deneyiniz");
+                    System.out.println("Kalan deneme hakkınız :" + right);
+                }
+            }
+        }
+    }
+}
