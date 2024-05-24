@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ebobEkok {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int ebob = 1;
+        System.out.print("N1 sayısı : ");
+        int N1 = inp.nextInt();
+        System.out.print("N2 sayısı : ");
+        int N2 = inp.nextInt();
+
+        int sayi = N1, sayi1;
+        int ebobb, ekokk;
+        while (sayi <= N1) {
+
+            if (N1 % sayi == 0 && N2 % sayi == 0) {
+                ebobb = sayi;
+                System.out.println("EBOB : " + ebobb);
+                break;
+            }
+            sayi--;
+        }
+        sayi1 = 1;
+        while (sayi1 <= (N1 * N2)) {
+            if (sayi1 % N1 == 0 && sayi1 % N2 == 0) {
+                ekokk = sayi1;
+                System.out.println("EKOK : " + ekokk);
+                break;
+            }
+            sayi1++;
+
+        }
+
+
+    }
+}
