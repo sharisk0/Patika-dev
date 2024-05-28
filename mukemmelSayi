@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class mukemmelSayi {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Mükemmel sayı bulan program");
+        System.out.print("Sorgulamak istediğiniz sayıyı giriniz :");
+        int num = inp.nextInt();
+        int sum = 0;
+        if (num > 0) {
+            for (int i = 1; i < num; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                }
+            }
+        } else {
+            System.out.println("NEGATİF SAYI GİRDİNİZ ! Pozitif bir sayı giriniz");
+        }
+        if (sum == num) {
+            System.out.println(num + " Sayısı bir Mükemmel Sayıdır. :)");
+        } else {
+            System.out.println(num + " Sayısı bir Mükemmel Sayı değildir. :(");
+        }
+    }
+}
