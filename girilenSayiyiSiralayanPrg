@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class girilenSayiyiSiralama {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Kaç adet sayı girilecek :");
+        int count = inp.nextInt();
+        System.out.print("1. sayıyı giriniz :");
+        int firstNum = inp.nextInt();
+
+        int bigNum= firstNum,minNum= firstNum;
+        for (int i = 2; i<=count; i++){
+            System.out.print(i+". sayıyı giriniz :");
+            int num = inp.nextInt();
+            if (num>bigNum){
+                bigNum=num;
+            }else if (num<minNum){
+                minNum=num;
+            }
+
+        }
+        System.out.println("En büyük sayı "+ bigNum);
+        System.out.println("En küçük sayı "+minNum);
+        }
+
+    }
+
