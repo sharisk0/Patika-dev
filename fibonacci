@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class fibonacci {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Sayı giriniz : ");
+        int ilk = 0, iki = 1, cevap;
+        int sayi = scan.nextInt();
+        for (int i = 0; i <= sayi; i++) {
+            System.out.println(ilk);
+            cevap = ilk + iki;
+            ilk = iki;
+            iki = cevap;
+
+
+        }
+
+    }
+}
